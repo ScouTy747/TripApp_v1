@@ -1,0 +1,1 @@
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\TripAppFrontend.csproj;x64
