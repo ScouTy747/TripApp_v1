@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "V4O79snYzFjmi2x1s8McPkHT8glsEykzeshj/UhBSUgV2V4B0mcZQtdge2gmq/2LVlvM8kH6D0jeEmYDLuJJVg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend_\\TripAppBackend_.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bohus\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.1\\microsoft.dotnet.ilcompiler.8.0.1.nupkg.sha512",
+    "C:\\Users\\bohus\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.1\\microsoft.net.illink.tasks.8.0.1.nupkg.sha512",
+    "C:\\Users\\bohus\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.1\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
