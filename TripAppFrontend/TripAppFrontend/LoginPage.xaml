@@ -33,7 +33,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="1" Text="Welcome!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
-            <Label Grid.Row="2" Text="Sign in to continue" TextColor="Black" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="None"/>
+            <Label Grid.Row="2" Text="Log in to continue" TextColor="Black" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="None"/>
 
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
@@ -61,6 +61,8 @@
 
                 <Button Text="SIGN IN" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Command="{Binding LoginCommanmd}"></Button>
 
+                
+                
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
                     <Label Text="New User?" TextColor="DarkGray" FontSize="Small"></Label>
                     <Label Text="Sign Up" TextColor="#1D8348" FontSize="Small"></Label>

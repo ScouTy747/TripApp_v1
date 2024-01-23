@@ -82,6 +82,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [
@@ -129,6 +133,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [
@@ -176,6 +184,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [
@@ -218,6 +230,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [
