@@ -34,6 +34,9 @@ namespace TripApp.API.Controllers
                 Email = model.Email,
             };
 
+            var passwordHasher = new PasswordHasher<RegisterModel>();
+            user.PasswordHash = passwordHasher.HashPassword(user, model.Password);
+
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
