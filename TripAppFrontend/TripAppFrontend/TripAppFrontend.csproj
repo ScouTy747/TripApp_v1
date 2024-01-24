@@ -67,6 +67,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="System.Net.Http" Version="4.3.4" />
 	</ItemGroup>
 
@@ -92,10 +93,6 @@
 	  <Compile Update="SignUp.xaml.cs">
 	    <DependentUpon>SignUp.xaml</DependentUpon>
 	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Services\" />
 	</ItemGroup>
 
 </Project>

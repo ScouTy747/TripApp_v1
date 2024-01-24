@@ -1,5 +1,7 @@
+using System.Text;
 using System.Windows.Input;
 using TripAppFrontend.ViewModels;
+using Newtonsoft.Json;
 
 namespace TripAppFrontend;
 
@@ -16,17 +18,19 @@ public partial class SignUp : ContentPage
             Email = EmailEntry.Text
         };
 
-        var apiService = new ApiService("adresu_backendu_sem_dám");
-        var response = await apiService.RegisterUserAsync(viewModel);
+        var apiService = new ApiService("http://localhost:5011/");
+        var request = new HttpRequestMessage(HttpMethod.Post, "/api/Register"); 
+        request.Content = new StringContent(JsonConvert.SerializeObject(viewModel), Encoding.UTF8, "application/json");
+
+
+        var response = await apiService.SendAsync(request);
 
         if (response != null && response.IsSuccessStatusCode)
         {
             await DisplayAlert("Success", "Registration successful", "OK");
-
         }
         else
         {
-    
             var errorMessage = await response.Content.ReadAsStringAsync();
             await DisplayAlert("Error", errorMessage, "OK");
         }

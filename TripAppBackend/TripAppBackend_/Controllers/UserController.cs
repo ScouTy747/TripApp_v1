@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TripAppBackend_;
 using TripAppBackend_.Models;
+using System.Threading.Tasks;
 
 namespace TripApp.API.Controllers
 {
@@ -21,34 +23,24 @@ namespace TripApp.API.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterModel model)
+        public async Task<ActionResult<IActionResult>> Register([FromBody] RegisterModel model)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Invalid registration data");
             }
 
-            var user = new RegisterModel
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.UserName == model.UserName);
+
+            if (existingUser != null)
             {
-                UserName = model.UserName,
-                Email = model.Email,
-            };
-
-            var passwordHasher = new PasswordHasher<RegisterModel>();
-            user.PasswordHash = passwordHasher.HashPassword(user, model.Password);
-
-            var result = await _userManager.CreateAsync(user, model.Password);
-
-            if (result.Succeeded)
-            {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-
-                return Ok("Registration successful");
+                return Conflict("Username already exists");
             }
-            else
-            {
-                return BadRequest(result.Errors);
-            }
+
+            await _userManager.CreateAsync(model);
+            await _context.SaveChangesAsync();
+
+            return Ok("Registration successful");
         }
     }
 }
