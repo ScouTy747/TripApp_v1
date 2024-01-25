@@ -22,7 +22,6 @@ namespace TripAppFrontend
         {
             try
             {
-                // Prepare the request
                 var request = new HttpRequestMessage(HttpMethod.Post, "/api/Register");
                 request.Content = new FormUrlEncodedContent(new[]
                 {
@@ -31,27 +30,27 @@ namespace TripAppFrontend
                     new KeyValuePair<string, string>("Email", viewModel.Email)
                 });
 
-                // Add the authorization header
+      
                 request.Headers.Add("Authorization", "Bearer <token>");
 
-                // Send the request
+            
                 var response = await _httpClient.SendAsync(request);
 
-                // Check the response
+            
                 if (response.IsSuccessStatusCode)
                 {
-                    // Registration successful
+         
                     return true;
                 }
                 else
                 {
-                    // Registration failed
+                    
                     return false;
                 }
             }
             catch (Exception ex)
             {
-                // An error occurred
+         
                 Console.WriteLine(ex.Message);
                 return false;
             }

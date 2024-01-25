@@ -1,0 +1,15 @@
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\bin\Debug\net8.0\JsonSerializationTest.exe
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\bin\Debug\net8.0\JsonSerializationTest.deps.json
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\bin\Debug\net8.0\JsonSerializationTest.runtimeconfig.json
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\bin\Debug\net8.0\JsonSerializationTest.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\bin\Debug\net8.0\JsonSerializationTest.pdb
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.AssemblyInfoInputs.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.AssemblyInfo.cs
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.csproj.CoreCompileInputs.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.sourcelink.json
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\refint\JsonSerializationTest.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.pdb
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\JsonSerializationTest.genruntimeconfig.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppBackend\JsonSerializationTest\obj\Debug\net8.0\ref\JsonSerializationTest.dll
