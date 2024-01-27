@@ -37,10 +37,10 @@ namespace TripAppBackend.Controllers
 
             if (user == null)
             {
-                return NotFound(); // User with the given username and password not found
+                return NotFound();
             }
 
-            return Ok(user); // User successfully authenticated
+            return Ok(user);
         }
 
         [HttpPost("register")]
@@ -53,13 +53,11 @@ namespace TripAppBackend.Controllers
                     return BadRequest("Invalid registration request");
                 }
 
-                // Ensure the user with the same username or email does not already exist
                 if (_context.Users.Any(u => u.UserName == newUser.UserName || u.Email == newUser.Email))
                 {
                     return Conflict("User with the same username or email already exists");
                 }
 
-                // Hash the password before saving it to the database
                 newUser.Password = HashPassword(newUser.Password);
 
                 _context.Users.Add(newUser);
@@ -69,8 +67,7 @@ namespace TripAppBackend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception details for troubleshooting
-                // You might want to use a logging framework (e.g., Serilog, NLog) in a production environment
+             
                 Console.Error.WriteLine($"Registration failed: {ex.Message}");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Registration failed");
             }
@@ -82,12 +79,10 @@ namespace TripAppBackend.Controllers
             return await _context.Users.ToListAsync();
         }
 
-        // Other actions...
 
         private string HashPassword(string password)
         {
-            // Implement a secure password hashing algorithm (e.g., Argon2, BCrypt, or PBKDF2)
-            // For simplicity, you can use a basic hashing algorithm for this example.
+            
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
         }
     }

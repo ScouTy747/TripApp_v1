@@ -20,18 +20,15 @@ public partial class Login : ContentPage
             return;
         }
 
-        // Create a dictionary to hold the user registration data
         var userData = new Dictionary<string, string>
     {
         { "LoginUserName", _loginModel.UserName },
         { "LoginPassword", _loginModel.Password },
     };
 
-        // Convert the dictionary to a JSON string
         var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
 
-        // Make a POST request to the API endpoint for user registration
-        var apiEndpoint = "http://localhost:5115/api/Users/login"; // Replace with your actual API endpoint
+        var apiEndpoint = "http://localhost:5115/api/Users/login"; 
         var httpClient = new System.Net.Http.HttpClient();
         var content = new System.Net.Http.StringContent(jsonUserData, System.Text.Encoding.UTF8, "application/json");
 
@@ -41,12 +38,10 @@ public partial class Login : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                // Navigate to MainPage.xaml
                 await Shell.Current.GoToAsync($"//MainPage");
             }
             else
             {
-                // Log or display the response details
                 var responseContent = await response.Content.ReadAsStringAsync();
                 await DisplayAlert("Error", $"Failed to register user. Status code: {response.StatusCode}\nResponse: {responseContent}", "OK");
             }
@@ -59,7 +54,6 @@ public partial class Login : ContentPage
 
     private async void SignInLabel_Tapped(object sender, EventArgs e)
     {
-        // Navigate to the LoginPage.xaml
         await Shell.Current.GoToAsync($"//SignUpPage");
     }
 }

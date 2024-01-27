@@ -15,14 +15,12 @@ public partial class SignUp : ContentPage
 
     private async void SignUpButton_Clicked(object sender, EventArgs e)
     {
-        // Check if all required fields are filled
         if (string.IsNullOrWhiteSpace(_viewModel.UserName) || string.IsNullOrWhiteSpace(_viewModel.Password) || string.IsNullOrWhiteSpace(_viewModel.Email))
         {
             await DisplayAlert("Error", "Please fill in all fields", "OK");
             return;
         }
 
-        // Create a dictionary to hold the user registration data
         var userData = new Dictionary<string, string>
         {
             { "UserName", _viewModel.UserName },
@@ -30,11 +28,9 @@ public partial class SignUp : ContentPage
             { "Email", _viewModel.Email }
         };
 
-        // Convert the dictionary to a JSON string
         var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
 
-        // Make a POST request to the API endpoint for user registration
-        var apiEndpoint = "http://localhost:5115/api/Users/register"; // Replace with your actual API endpoint
+        var apiEndpoint = "http://localhost:5115/api/Users/register"; 
         var httpClient = new System.Net.Http.HttpClient();
         var content = new System.Net.Http.StringContent(jsonUserData, System.Text.Encoding.UTF8, "application/json");
 
@@ -59,7 +55,6 @@ public partial class SignUp : ContentPage
 
     private async void SignInLabel_Tapped(object sender, EventArgs e)
     {
-        // Navigate to the LoginPage.xaml
         await Shell.Current.GoToAsync($"//LoginPage");
     }
 }

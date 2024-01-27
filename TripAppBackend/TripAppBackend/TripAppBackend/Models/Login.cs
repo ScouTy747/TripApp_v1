@@ -5,8 +5,6 @@ namespace TripAppBackend.Models
 {
     public class Login
     {
-        // Existing properties from the Users class
-        // Adding new properties for login credentials
         [NotMapped]
         [Required(ErrorMessage = "Username is required")]
         public string LoginUserName { get; set; }
