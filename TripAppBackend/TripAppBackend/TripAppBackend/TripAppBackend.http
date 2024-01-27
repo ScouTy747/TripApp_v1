@@ -1,0 +1,11 @@
+@TripAppBackend_HostAddress = http://localhost:5115
+
+GET {{TripAppBackend_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{TripAppBackend_HostAddress}}/todos/1
+Accept: application/json
+
+###

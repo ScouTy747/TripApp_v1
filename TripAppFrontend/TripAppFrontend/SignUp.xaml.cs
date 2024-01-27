@@ -1,38 +1,65 @@
-using System.Text;
-using System.Windows.Input;
 using TripAppFrontend.ViewModels;
-using Newtonsoft.Json;
 
 namespace TripAppFrontend;
 
-
-
 public partial class SignUp : ContentPage
 {
+    private SignUpViewModel _viewModel;
+
+    public SignUp()
+    {
+        InitializeComponent();
+        _viewModel = new SignUpViewModel();
+        BindingContext = _viewModel;
+    }
+
     private async void SignUpButton_Clicked(object sender, EventArgs e)
     {
-        var viewModel = new SignUpViewModel
+        // Check if all required fields are filled
+        if (string.IsNullOrWhiteSpace(_viewModel.UserName) || string.IsNullOrWhiteSpace(_viewModel.Password) || string.IsNullOrWhiteSpace(_viewModel.Email))
         {
-            UserName = UserNameEntry.Text,
-            Password = PasswordEntry.Text,
-            Email = EmailEntry.Text
+            await DisplayAlert("Error", "Please fill in all fields", "OK");
+            return;
+        }
+
+        // Create a dictionary to hold the user registration data
+        var userData = new Dictionary<string, string>
+        {
+            { "UserName", _viewModel.UserName },
+            { "Password", _viewModel.Password },
+            { "Email", _viewModel.Email }
         };
 
-        var apiService = new ApiService("http://localhost:5011/");
-        var request = new HttpRequestMessage(HttpMethod.Post, "/api/Register"); 
-        request.Content = new StringContent(JsonConvert.SerializeObject(viewModel), Encoding.UTF8, "application/json");
+        // Convert the dictionary to a JSON string
+        var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
 
+        // Make a POST request to the API endpoint for user registration
+        var apiEndpoint = "http://localhost:5115/api/Users/register"; // Replace with your actual API endpoint
+        var httpClient = new System.Net.Http.HttpClient();
+        var content = new System.Net.Http.StringContent(jsonUserData, System.Text.Encoding.UTF8, "application/json");
 
-        var response = await apiService.SendAsync(request);
-
-        if (response != null && response.IsSuccessStatusCode)
+        try
         {
-            await DisplayAlert("Success", "Registration successful", "OK");
+            var response = await httpClient.PostAsync(apiEndpoint, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                await DisplayAlert("Success", "User registered successfully", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Error", "Failed to register user", "OK");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            var errorMessage = await response.Content.ReadAsStringAsync();
-            await DisplayAlert("Error", errorMessage, "OK");
+            await DisplayAlert("Error", $"Exception: {ex.Message}", "OK");
         }
+    }
+
+    private async void SignInLabel_Tapped(object sender, EventArgs e)
+    {
+        // Navigate to the LoginPage.xaml
+        await Shell.Current.GoToAsync($"//LoginPage");
     }
 }

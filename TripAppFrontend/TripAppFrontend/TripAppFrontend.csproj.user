@@ -14,7 +14,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="LoginPage.xaml">
+    <MauiXaml Update="Login.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="SignUp.xaml">

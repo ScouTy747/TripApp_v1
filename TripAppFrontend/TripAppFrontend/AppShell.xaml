@@ -8,8 +8,18 @@
     Title="TripAppFrontend">
 
     <ShellContent
-        Title="Home"
+        Title="Login"
+        ContentTemplate="{DataTemplate local:Login}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="SignUp"
         ContentTemplate="{DataTemplate local:SignUp}"
+        Route="SignUpPage" />
+
+    <ShellContent
+        Title="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
 </Shell>

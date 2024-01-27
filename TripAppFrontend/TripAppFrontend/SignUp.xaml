@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TripAppFrontend.SignUp"
              Title="SignUp"
-             Shell.NavBarIsVisible="False">
-             
-
-             
+             Shell.NavBarIsVisible="False"
+             >
 
 
     <Grid BackgroundColor="White">
@@ -35,7 +33,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="1" Text="Welcome!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
-            <Label Grid.Row="2" Text="Sign in to continue" TextColor="Black" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="None"/>
+            <Label Grid.Row="2" Text="Sign up to continue" TextColor="Black" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="None"/>
 
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
@@ -43,7 +41,7 @@
                         <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
                             <Image Source="avatarlogin2.png" Aspect="AspectFill" Margin="0"></Image>
                         </Frame>
-                        <Entry x:Name="UserNameEntry" Text="{Binding UserName}" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                        <Entry Text="{Binding UserName}" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
@@ -51,7 +49,7 @@
                         <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
                             <Image Source="password.png" Aspect="AspectFill" Margin="0"></Image>
                         </Frame>
-                        <Entry x:Name="PasswordEntry" Text="{Binding Password}" Placeholder="Password" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                        <Entry Text="{Binding Email}" Placeholder="Email" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
@@ -59,7 +57,7 @@
                         <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
                             <Image Source="password.png" Aspect="AspectFill" Margin="0"></Image>
                         </Frame>
-                        <Entry x:Name="EmailEntry" Text="{Binding Email}" Placeholder="Email" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
                     </StackLayout>
                 </Frame>
 
@@ -69,14 +67,16 @@
                     <Label Text="Forgot Password" TextColor="#1D8348" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Center"/>
                 </StackLayout>
 
-                <Button x:Name="SignUpButton" Text="SIGN UP" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Clicked="SignUpButton_Clicked"></Button>
+                <Button Text="SIGN UP" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Clicked="SignUpButton_Clicked"></Button>
 
 
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
-                    <Label Text="New User?" TextColor="DarkGray" FontSize="Small"></Label>
-                    <Label Text="Sign Up" TextColor="#1D8348" FontSize="Small"></Label>
-
+                    <Label Text="I have account" TextColor="#1D8348" FontSize="Small">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SignInLabel_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
                 </StackLayout>
 
             </StackLayout>
