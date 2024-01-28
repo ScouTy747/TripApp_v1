@@ -1,5 +1,6 @@
 ﻿using TripAppFrontend.ViewModels;
 using System.Net.Http;
+using System.Net.Http.Json;
 
 namespace TripAppFrontend
 {
@@ -53,6 +54,33 @@ namespace TripAppFrontend
          
                 Console.WriteLine(ex.Message);
                 return false;
+            }
+        }
+
+        public async Task<Users> LoginUserAsync(LoginViewModel viewModel)
+        {
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Post, "/api/Users/login");
+                request.Content = new StringContent(System.Text.Json.JsonSerializer.Serialize(viewModel), System.Text.Encoding.UTF8, "application/json");
+
+                var response = await _httpClient.SendAsync(request);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Převést odpověď na objekt Users
+                    var loggedInUser = await response.Content.ReadFromJsonAsync<Users>();
+                    return loggedInUser;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
             }
         }
     }

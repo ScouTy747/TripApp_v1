@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TripAppFrontend.UserEdit"
+             Title="UserEdit"
+             Shell.NavBarIsVisible="False">
+    
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Path Stroke="#fff" Data="m-36.5,-209.28l903.99999,0l-6.44563,292.9223c-327.92156,165 -559.96434,145.84812 -897.55436,70.32079l0,-363.24309z" Fill="LightCoral" HorizontalOptions="Center"/>
+
+        <StackLayout>
+            <Frame BackgroundColor="SkyBlue" HeightRequest="80" WidthRequest="80" CornerRadius="80" Padding="0" Margin="0,25,0,0" HorizontalOptions="Center">
+                <Image Source="avatarlogin.png" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+        </StackLayout>
+        <Label Text="ID: 1" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+        <Label Text="bohusikm@gmail.com" TextColor="Black" HorizontalOptions="EndAndExpand"/>
+        <Label Text="Martin Bohušík" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,110,0,0"/>
+
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Text="User informations" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+            <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="CenterAndExpand" WidthRequest="550">
+                <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="avatarlogin2.png" Aspect="AspectFill" Margin="0"></Image>
+                        </Frame>
+                        <Entry Text="{Binding UserName}" Placeholder="New username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="password.png" Aspect="AspectFill" Margin="0"></Image>
+                        </Frame>
+                        <Entry Text="{Binding Email}" Placeholder="New email" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="password.png" Aspect="AspectFill" Margin="0"></Image>
+                        </Frame>
+                        <Entry Text="{Binding Password}" Placeholder="New password" IsPassword="True" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                    </StackLayout>
+                </Frame>
+
+
+
+                <Button Text="Save" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0"></Button>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+                    <Label Text="Back to main page" TextColor="#1D8348" FontSize="Small">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SignInLabel_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

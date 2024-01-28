@@ -1,60 +1,86 @@
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using TripAppFrontend.ViewModels;
 
-
-namespace TripAppFrontend;
-
-public partial class Login : ContentPage
+namespace TripAppFrontend
 {
-    private LoginViewModel _loginModel = new LoginViewModel();
-    public Login()
-	{
-		InitializeComponent();
-        BindingContext = _loginModel;
-    }
-
-    private async void SignUpButton_Clicked(object sender, EventArgs e)
+    public partial class Login : ContentPage
     {
-        if (string.IsNullOrWhiteSpace(_loginModel.UserName) || string.IsNullOrWhiteSpace(_loginModel.Password))
+        private LoginViewModel _loginModel = new LoginViewModel();
+        private MainPageViewModel _mainPageModel = new MainPageViewModel();
+
+        public Login()
         {
-            await DisplayAlert("Error", "Please fill in all fields", "OK");
-            return;
+            InitializeComponent();
+            BindingContext = _loginModel;
         }
 
-        var userData = new Dictionary<string, string>
+        private async void SignUpButton_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(_loginModel.UserName) || string.IsNullOrWhiteSpace(_loginModel.Password))
+            {
+                await DisplayAlert("Error", "Please fill in all fields", "OK");
+                return;
+            }
+
+            var userData = new Dictionary<string, string>
     {
         { "LoginUserName", _loginModel.UserName },
         { "LoginPassword", _loginModel.Password },
     };
 
-        var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
+            var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
 
-        var apiEndpoint = "http://localhost:5115/api/Users/login"; 
-        var httpClient = new System.Net.Http.HttpClient();
-        var content = new System.Net.Http.StringContent(jsonUserData, System.Text.Encoding.UTF8, "application/json");
+            var apiEndpoint = "http://localhost:5115/api/Users/login";
+            var httpClient = new System.Net.Http.HttpClient();
+            var content = new System.Net.Http.StringContent(jsonUserData, System.Text.Encoding.UTF8, "application/json");
 
-        try
-        {
-            var response = await httpClient.PostAsync(apiEndpoint, content);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                await Shell.Current.GoToAsync($"//MainPage");
+                var response = await httpClient.PostAsync(apiEndpoint, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine($"Response Content: {responseContent}");
+
+                    var responseContentData = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseContent);
+                    Debug.WriteLine($"Response Content Data: {JsonConvert.SerializeObject(responseContentData)}");
+
+                    if (responseContentData.TryGetValue("userName", out var userName) &&
+                        responseContentData.TryGetValue("email", out var email) &&
+                        responseContentData.TryGetValue("userId", out var userIdStr))
+                    {
+                        var userId = int.Parse(userIdStr);
+
+                        Device.BeginInvokeOnMainThread(() =>
+                        {
+                            _mainPageModel.UpdateUserInfo(userName, email, userId);
+                        });
+
+                        await Shell.Current.GoToAsync($"//MainPage");
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Niektorý z k¾úèov chýba v odpovedi zo servera.");
+                    }
+                }
+                else
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    await DisplayAlert("Error", $"Failed to register user. Status code: {response.StatusCode}\nResponse: {responseContent}", "OK");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                var responseContent = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("Error", $"Failed to register user. Status code: {response.StatusCode}\nResponse: {responseContent}", "OK");
+                await DisplayAlert("Error", $"Exception: {ex.Message}", "OK");
             }
         }
-        catch (Exception ex)
+        private async void SignInLabel_Tapped(object sender, EventArgs e)
         {
-            await DisplayAlert("Error", $"Exception: {ex.Message}", "OK");
+            await Shell.Current.GoToAsync($"//SignUpPage");
         }
-    }
-
-    private async void SignInLabel_Tapped(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync($"//SignUpPage");
     }
 }
-

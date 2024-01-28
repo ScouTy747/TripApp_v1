@@ -304,3 +304,47 @@ C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\ob
 C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.pdb
 C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.genruntimeconfig.cache
 C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\TripAppFrontend.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@3x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@3x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@3x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\avatarlogin.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\avatarlogin2.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\password.png
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.stamp
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Regular.ttf
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Semibold.ttf
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\actool\_PartialAppManifest.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\actool\_BundleResourceWithLogicalName.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\actool\_ProcessedImageAssetsPath.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\coremlc\_PartialAppManifest.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\_ProcessedBundleResourcesPath.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\_ProcessedContentPath.items
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.csproj.AssemblyReference.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.AssemblyInfoInputs.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.AssemblyInfo.cs
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.csproj.CoreCompileInputs.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.sourcelink.json
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\refint\TripAppFrontend.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TripAppFrontend.pdb

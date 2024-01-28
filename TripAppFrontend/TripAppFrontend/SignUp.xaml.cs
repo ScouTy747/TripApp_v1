@@ -30,7 +30,7 @@ public partial class SignUp : ContentPage
 
         var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
 
-        var apiEndpoint = "http://localhost:5115/api/Users/register"; 
+        var apiEndpoint = "http://localhost:5115/api/Users/register";
         var httpClient = new System.Net.Http.HttpClient();
         var content = new System.Net.Http.StringContent(jsonUserData, System.Text.Encoding.UTF8, "application/json");
 

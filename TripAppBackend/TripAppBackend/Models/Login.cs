@@ -6,11 +6,11 @@ namespace TripAppBackend.Models
     public class Login
     {
         [NotMapped]
-        [Required(ErrorMessage = "Username is required")]
+        [Required]
         public string LoginUserName { get; set; }
 
         [NotMapped]
-        [Required(ErrorMessage = "Password is required")]
+        [Required]
         public string LoginPassword { get; set; }
         public bool IsLoggedIn { get; set; }
     }

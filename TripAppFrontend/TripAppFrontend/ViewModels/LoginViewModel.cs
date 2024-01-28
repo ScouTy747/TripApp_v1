@@ -45,20 +45,16 @@ namespace TripAppFrontend.ViewModels
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // Successful login
-                    // Redirect to MainPage.xaml
+
                     await Shell.Current.GoToAsync("//MainPage");
                 }
                 else
                 {
-                    // Display error message for unsuccessful login
-                   
+
                 }
             }
             catch (Exception ex)
             {
-                // Handle exception
-                
             }
         }
     }

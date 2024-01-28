@@ -1,24 +1,32 @@
-﻿namespace TripAppFrontend
+﻿using Newtonsoft.Json;
+using TripAppFrontend.ViewModels;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http;
+using System.Diagnostics;
+
+namespace TripAppFrontend
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private MainPageViewModel _mainPageModel = new MainPageViewModel();
 
         public MainPage()
         {
             InitializeComponent();
+            _mainPageModel = new MainPageViewModel();
+            BindingContext = _mainPageModel;
+
+            Debug.WriteLine($"BindingContext set to {_mainPageModel}");
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void SignInLabel_Tapped(object sender, EventArgs e)
         {
-            count++;
+            await Shell.Current.GoToAsync($"//EditTripPage");
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private async void SignInLabel_Tapped_UserEdit(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"//UserEditPage");
         }
     }
 

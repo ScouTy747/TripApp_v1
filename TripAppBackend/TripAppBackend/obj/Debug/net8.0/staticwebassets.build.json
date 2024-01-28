@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QtCQbgTv2ppNkJzRudkHvteOTZ22nsfWAJy1zQHRVgU=",
+  "Hash": "ryKSejXv+iV4NgoBX0jFZFsR79uZtggBHExbU5TvDNo=",
   "Source": "TripAppBackend",
   "BasePath": "_content/TripAppBackend",
   "Mode": "Default",
@@ -47,10 +47,10 @@
       "OriginalItemSpec": "C:\\Users\\bohus\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend\\TripAppBackend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TripAppBackend.styles.css",
+      "Identity": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TripAppBackend.styles.css",
       "SourceId": "TripAppBackend",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend\\TripAppBackend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TripAppBackend",
       "RelativePath": "TripAppBackend.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend\\TripAppBackend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TripAppBackend.styles.css"
+      "OriginalItemSpec": "C:\\Users\\bohus\\OneDrive\\Počítač\\TripApp_v1\\TripAppBackend\\TripAppBackend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TripAppBackend.styles.css"
     }
   ]
 }
