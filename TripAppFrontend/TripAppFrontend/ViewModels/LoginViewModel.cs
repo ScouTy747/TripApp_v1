@@ -68,15 +68,12 @@ namespace TripAppFrontend.ViewModels
                     {
                         var token = loginResponse.Token;
 
-                        // Set the JWT token on the MainPageViewModel
                         var mainPageModel = new MainPageViewModel();
                         mainPageModel.JwtToken = token;
 
-                        // Navigate to MainPage
                         await Shell.Current.GoToAsync($"//MainPage");
 
 
-                        // Display a message to confirm the login
                         Debug.WriteLine("Login Successful", $"You have been logged in successfully.", "OK");
                     }
                     else

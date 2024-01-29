@@ -53,10 +53,8 @@ namespace TripAppFrontend
                     {
                         var token = loginResponse.Token;
 
-                        // Uložte token do zabezpeèeného úložiska alebo použite bezpeènú správu stavu
                         _mainPageModel.SaveJwtToken(token);
 
-                        // Navigujte na MainPage
                         await Shell.Current.GoToAsync($"//MainPage");
                     }
                     else

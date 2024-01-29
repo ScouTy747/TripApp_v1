@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TripAppFrontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f44beec96a0e13ae99fbeeff4de7e3b86c036e08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f8298f261374225ce15618acab75944f6b65338e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TripAppFrontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TripAppFrontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
