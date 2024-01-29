@@ -1,6 +1,8 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
+using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -23,6 +25,17 @@ namespace TripAppFrontend.ViewModels
             set => SetProperty(ref _password, value);
         }
 
+        private string _token;
+
+        public string Token
+        {
+            get => _token;
+            set
+            {
+                _token = value;
+                OnPropertyChanged(nameof(Token));
+            }
+        }
         public AsyncRelayCommand LoginCommand { get; }
 
         public LoginViewModel()
@@ -45,17 +58,43 @@ namespace TripAppFrontend.ViewModels
 
                 if (response.IsSuccessStatusCode)
                 {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine($"Response Content: {responseContent}");
 
-                    await Shell.Current.GoToAsync("//MainPage");
+                    var loginResponse = JsonConvert.DeserializeObject<LoginViewModel>(responseContent);
+                    Debug.WriteLine($"Response Content Data: {JsonConvert.SerializeObject(loginResponse)}");
+
+                    if (loginResponse != null)
+                    {
+                        var token = loginResponse.Token;
+
+                        // Set the JWT token on the MainPageViewModel
+                        var mainPageModel = new MainPageViewModel();
+                        mainPageModel.JwtToken = token;
+
+                        // Navigate to MainPage
+                        await Shell.Current.GoToAsync($"//MainPage");
+
+
+                        // Display a message to confirm the login
+                        Debug.WriteLine("Login Successful", $"You have been logged in successfully.", "OK");
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Error", "Invalid response from the server.", "OK");
+                    }
                 }
                 else
                 {
-
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Error", $"Failed to log in. Status code: {response.StatusCode}\nResponse: {responseContent}", "OK");
                 }
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("Error", $"Exception: {ex.Message}", "OK");
             }
         }
+
     }
 }

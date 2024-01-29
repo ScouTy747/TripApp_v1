@@ -8,17 +8,14 @@ namespace TripAppFrontend
 {
     public partial class MainPage : ContentPage
     {
-        private MainPageViewModel _mainPageModel = new MainPageViewModel();
+
+        private MainPageViewModel _mainPageViewModel = new MainPageViewModel();
 
         public MainPage()
         {
             InitializeComponent();
-            _mainPageModel = new MainPageViewModel();
-            BindingContext = _mainPageModel;
-
-            Debug.WriteLine($"BindingContext set to {_mainPageModel}");
+            BindingContext = _mainPageViewModel;
         }
-
         private async void SignInLabel_Tapped(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync($"//EditTripPage");

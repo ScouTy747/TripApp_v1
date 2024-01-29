@@ -7,11 +7,11 @@ namespace TripAppBackend.Models
     {
         [NotMapped]
         [Required]
-        public string LoginUserName { get; set; }
+        public string LoginUserName { get; set; } = string.Empty;
 
         [NotMapped]
         [Required]
-        public string LoginPassword { get; set; }
+        public string LoginPassword { get; set; } = string.Empty;
         public bool IsLoggedIn { get; set; }
     }
 }

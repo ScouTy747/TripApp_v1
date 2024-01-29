@@ -1,13 +1,21 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using System.ComponentModel;
 using System.Diagnostics;
 
 namespace TripAppFrontend.ViewModels
 {
     public class MainPageViewModel : ObservableObject
     {
+        private string _jwtToken;
         private int _userId;
-        private string _userName;
         private string _email;
+        private string _userName;
+
+        public string JwtToken
+        {
+            get => _jwtToken;
+            set => SetProperty(ref _jwtToken, value);
+        }
 
         public int UserId
         {
@@ -39,5 +47,13 @@ namespace TripAppFrontend.ViewModels
             OnPropertyChanged(nameof(Email));
             OnPropertyChanged(nameof(UserName));
         }
+
+        public void SaveJwtToken(string token)
+        {
+            JwtToken = token;
+        }
+
     }
+
+
 }

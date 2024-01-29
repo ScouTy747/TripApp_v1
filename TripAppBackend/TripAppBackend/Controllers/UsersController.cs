@@ -92,6 +92,7 @@ namespace TripAppBackend.Controllers
             }
             catch (Exception ex)
             {
+                Console.Error.WriteLine($"Getting logged in user failed: {ex.Message}");
                 return Unauthorized("Invalid token");
             }
         }

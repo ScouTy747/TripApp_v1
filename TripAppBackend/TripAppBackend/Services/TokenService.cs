@@ -18,7 +18,7 @@ namespace TripAppBackend.Services
 
         public string GenerateToken(int userId)
         {
-            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"]);
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"] ?? string.Empty);
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -34,7 +34,7 @@ namespace TripAppBackend.Services
 
         public int GetUserIdFromToken(string token)
         {
-            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"]);
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"] ?? string.Empty);
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var validationParameters = new TokenValidationParameters
@@ -48,8 +48,9 @@ namespace TripAppBackend.Services
             SecurityToken validatedToken;
             var principal = tokenHandler.ValidateToken(token, validationParameters, out validatedToken);
 
-            var userIdClaim = principal.FindFirst("userId");
+            var userIdClaim = principal?.FindFirst("userId");
             return userIdClaim != null && int.TryParse(userIdClaim.Value, out int userId) ? userId : -1;
         }
     }
+
 }

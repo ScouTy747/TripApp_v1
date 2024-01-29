@@ -26,12 +26,12 @@ namespace TripAppFrontend
             }
 
             var userData = new Dictionary<string, string>
-    {
-        { "LoginUserName", _loginModel.UserName },
-        { "LoginPassword", _loginModel.Password },
-    };
+            {
+                { "LoginUserName", _loginModel.UserName },
+                { "LoginPassword", _loginModel.Password },
+            };
 
-            var jsonUserData = Newtonsoft.Json.JsonConvert.SerializeObject(userData);
+            var jsonUserData = JsonConvert.SerializeObject(userData);
 
             var apiEndpoint = "http://localhost:5115/api/Users/login";
             var httpClient = new System.Net.Http.HttpClient();
@@ -46,31 +46,28 @@ namespace TripAppFrontend
                     var responseContent = await response.Content.ReadAsStringAsync();
                     Debug.WriteLine($"Response Content: {responseContent}");
 
-                    var responseContentData = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseContent);
-                    Debug.WriteLine($"Response Content Data: {JsonConvert.SerializeObject(responseContentData)}");
+                    var loginResponse = JsonConvert.DeserializeObject<LoginViewModel>(responseContent);
+                    Debug.WriteLine($"Response Content Data: {JsonConvert.SerializeObject(loginResponse)}");
 
-                    if (responseContentData.TryGetValue("userName", out var userName) &&
-                        responseContentData.TryGetValue("email", out var email) &&
-                        responseContentData.TryGetValue("userId", out var userIdStr))
+                    if (loginResponse != null)
                     {
-                        var userId = int.Parse(userIdStr);
+                        var token = loginResponse.Token;
 
-                        Device.BeginInvokeOnMainThread(() =>
-                        {
-                            _mainPageModel.UpdateUserInfo(userName, email, userId);
-                        });
+                        // Uložte token do zabezpeèeného úložiska alebo použite bezpeènú správu stavu
+                        _mainPageModel.SaveJwtToken(token);
 
+                        // Navigujte na MainPage
                         await Shell.Current.GoToAsync($"//MainPage");
                     }
                     else
                     {
-                        Debug.WriteLine("Niektorý z k¾úèov chýba v odpovedi zo servera.");
+                        Debug.WriteLine("Invalid response from the server.");
                     }
                 }
                 else
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("Error", $"Failed to register user. Status code: {response.StatusCode}\nResponse: {responseContent}", "OK");
+                    await DisplayAlert("Error", $"Failed to log in. Status code: {response.StatusCode}\nResponse: {responseContent}", "OK");
                 }
             }
             catch (Exception ex)
@@ -78,6 +75,7 @@ namespace TripAppFrontend
                 await DisplayAlert("Error", $"Exception: {ex.Message}", "OK");
             }
         }
+
         private async void SignInLabel_Tapped(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync($"//SignUpPage");

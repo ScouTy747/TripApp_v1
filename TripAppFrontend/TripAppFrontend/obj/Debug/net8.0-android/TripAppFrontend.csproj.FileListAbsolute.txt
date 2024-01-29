@@ -1147,3 +1147,23 @@ C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripApp
 C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\TripAppFrontend.sourcelink.json
 C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\TripAppFrontend.dll
 C:\Users\bohus\OneDrive\Počítač\TripApp_v1 – kópia\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\TripAppFrontend.pdb
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\96\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\99\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\107\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\112\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\115\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\118\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\122\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\124\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\147\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\149\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\151\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\lp\158\jl\files.cache
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Http.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.ObjectPool.dll
+C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-android\android\assets\Microsoft.Net.Http.Headers.dll

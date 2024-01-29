@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-28T21:15:41.402</Modified>
+      <Modified>2024-01-29T21:04:54.327</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-28T21:15:41.291</Modified>
+      <Modified>2024-01-29T21:04:54.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TripAppFrontend.runtimeconfig.json">
       <PackagePath>TripAppFrontend.runtimeconfig.json</PackagePath>
-      <Modified>2024-01-28T19:58:59.847</Modified>
+      <Modified>2024-01-29T21:04:53.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TripAppFrontend.dll">
       <PackagePath>TripAppFrontend.dll</PackagePath>
-      <Modified>2024-01-28T21:15:40.478</Modified>
+      <Modified>2024-01-29T20:29:32.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TripAppFrontend.exe</PackagePath>
-      <Modified>2024-01-28T21:15:40.483</Modified>
+      <Modified>2024-01-29T20:29:32.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -299,7 +299,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bohus\OneDrive\Počítač\TripApp_v1\TripAppFrontend\TripAppFrontend\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TripAppFrontend.deps.json">
       <PackagePath>TripAppFrontend.deps.json</PackagePath>
-      <Modified>2024-01-28T21:15:41.226</Modified>
+      <Modified>2024-01-29T21:04:53.835</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bohus\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
