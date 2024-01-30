@@ -2,9 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TripAppFrontend.MainPage"
-             Title="SignUp"
-             Shell.NavBarIsVisible="False"
-             BindingContext="{Binding MainPageViewModel}">
+             Title="MainPage"
+             Shell.NavBarIsVisible="False">
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="220"/>
@@ -35,7 +34,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,5,0,0" Padding="0">
                 <Label Text="Log Out" TextColor="Black" FontSize="Micro">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="SignInLabel_Tapped"/>
+                        <TapGestureRecognizer Tapped="SignOutLabel_Tapped"/>
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>

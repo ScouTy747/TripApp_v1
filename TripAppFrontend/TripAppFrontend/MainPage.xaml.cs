@@ -25,6 +25,14 @@ namespace TripAppFrontend
         {
             await Shell.Current.GoToAsync($"//UserEditPage");
         }
+
+        private async void SignOutLabel_Tapped(object sender, EventArgs e)
+        {
+
+            _mainPageViewModel.SaveJwtToken(null);
+
+            await Shell.Current.GoToAsync($"//LoginPage");
+        }
     }
 
 }

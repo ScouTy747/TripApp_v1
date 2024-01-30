@@ -63,10 +63,17 @@
 
                 <Button Text="Save" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0"></Button>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0" Padding="0">
                     <Label Text="Back to main page" TextColor="#1D8348" FontSize="Small">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="SignInLabel_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0" Padding="0">
+                    <Label Text="Delete Account" TextColor="DarkRed" FontSize="Small">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DeleteAccountLabel_Tapped"/>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
